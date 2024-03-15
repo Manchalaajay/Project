@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+    function validateForm() {
+        var age = document.getElementById("age").value;
+        if (age < 0) {
+            alert("Age cannot be negative");
+            return false; // Prevent form submission
+        }
+        return true; // Allow form submission
+    }
+    
+</script>
+</head>
+<body>
+<form action="web" method="post" onsubmit=" validateForm()">
+    Enter your Id:<input type="text" name="id"><br>
+    Enter your Name:<input type="text" name="name"><br>
+    Enter your Email:<input type="email" name="mail"><br>
+    Enter your Age:<input type="number" name="age" id="age"><br>
+    Enter your DOB:<input type="date" name="dob"><br><br>
+    <input type="submit" value="Submit">&nbsp&nbsp&nbsp&nbsp
+    <a href="view">ViewData</a>
+</form>
+</body>
+</html>
